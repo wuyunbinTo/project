@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>HelloWorld</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.bootcss.com/Sortable/1.6.0/Sortable.js"></script>
+  <style>
+    .weui-switch {
+      display: block;
+      position: relative;
+      width: 52px;
+      height: 24px;
+      border: 1px solid #DFDFDF;
+      outline: 0;
+      border-radius: 16px;
+      box-sizing: border-box;
+      background-color: #DFDFDF;
+      transition: background-color 0.5s, border 0.5s;
+      cursor: pointer;
+    }
+
+    .weui-switch:before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 22px;
+      border-radius: 15px;
+      background-color: #FDFDFD;
+      transition: transform 0.5s cubic-bezier(0.45, 1, 0.4, 1);
+    }
+
+    .weui-switch:after {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 15px;
+      background-color: #FFFFFF;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+      transition: transform 0.5s cubic-bezier(0.4, 0.4, 0.25, 1.35);
+    }
+
+    .weui-switch-on {
+      border-color: #6F6F6F;
+      background-color: #1AAD19;
+    }
+
+    .weui-switch-on:before {
+      border-color: #1AAD19;
+      background-color: #409eff;
+    }
+
+    .weui-switch-on:after {
+      transform: translateX(28px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+
+    <div>
+      <span class="weui-switch" :class="{'weui-switch-on' : isChecked}" @click="toggle" style="position:relative">
+  
+      </span>
+    </div>
+  </div>
+
+  <script>
+    var testVue = new Vue({
+      el: '#app',
+      data() {
+        return {
+          isChecked: false
+        }
+      },
+      methods: {
+        toggle() {
+          this.isChecked = !this.isChecked;
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
+
