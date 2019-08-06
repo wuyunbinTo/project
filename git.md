@@ -27,7 +27,23 @@ git diff
 ```
 git rm
 ```
+#### 修改文件名
+```
+git mv file_from file_to
+```
+#### 分支创建
+```
+git branch 
+```
+#### 分支切换
+```
+it checkout 
+```
+#### 新建一个分支并同时切换到那个分支上
 
+```
+git checkout -b iss53
+```
 ####  删除分支
  
 1、删除本地分支
